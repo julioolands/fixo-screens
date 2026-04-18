@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=375px">
+<title>FIXo · 12 · Panel Técnico</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--black:#0D0D0D;--white:#F5F2ED;--cream:#EDE9E1;--orange:#E8531A;--mid:#6B6560;}
+body{width:375px;min-height:812px;background:var(--black);font-family:'Syne',sans-serif;display:flex;flex-direction:column;}
+.status{display:flex;justify-content:space-between;align-items:center;padding:14px 24px 6px;}
+.status-time{font-weight:700;font-size:13px;color:var(--white);}
+.sbd{display:flex;gap:5px;}.dot{width:5px;height:5px;border-radius:50%;background:var(--white);opacity:.7;}
+.hdr{display:flex;justify-content:space-between;align-items:center;padding:16px 24px 20px;}
+.greeting{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,242,237,.4);}
+.name{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;color:var(--white);letter-spacing:-.02em;margin-top:2px;}
+.badge-on{background:var(--orange);color:white;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:20px;border:none;}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 20px;margin-bottom:20px;}
+.sc{background:rgba(245,242,237,.06);border:.5px solid rgba(245,242,237,.1);border-radius:14px;padding:14px 16px;}
+.slbl{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,242,237,.35);margin-bottom:6px;}
+.sval{font-family:'Syne',sans-serif;font-weight:800;font-size:22px;color:var(--white);letter-spacing:-.02em;}
+.ssub{font-family:'DM Mono',monospace;font-size:9px;color:var(--orange);margin-top:2px;}
+.rlbl{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,242,237,.35);padding:0 20px;margin-bottom:12px;}
+.cards{display:flex;flex-direction:column;gap:10px;padding:0 20px;}
+.rcard{background:rgba(245,242,237,.06);border:.5px solid rgba(245,242,237,.1);border-radius:14px;padding:14px 16px;}
+.rcard.new{border-color:var(--orange);background:rgba(232,83,26,.08);}
+.rtop{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
+.rnm{font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:var(--white);}
+.rtag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:10px;}
+.tag-new{background:rgba(232,83,26,.2);color:var(--orange);}
+.tag-prog{background:rgba(29,158,117,.15);color:#1D9E75;}
+.tag-done{background:rgba(245,242,237,.1);color:rgba(245,242,237,.4);}
+.rsvc{font-family:'DM Mono',monospace;font-size:10px;color:rgba(245,242,237,.4);letter-spacing:.06em;margin-bottom:8px;}
+.rbot{display:flex;justify-content:space-between;align-items:center;}
+.raddr{font-family:'Syne',sans-serif;font-size:11px;color:rgba(245,242,237,.5);}
+.rprice{font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:var(--white);}
+.rbtns{display:flex;gap:6px;margin-top:10px;}
+.rbtn-acc{flex:1;background:var(--orange);color:white;border:none;border-radius:10px;padding:9px;font-family:'Syne',sans-serif;font-weight:700;font-size:12px;text-align:center;}
+.rbtn-dec{flex:1;background:rgba(245,242,237,.08);color:rgba(245,242,237,.5);border:.5px solid rgba(245,242,237,.12);border-radius:10px;padding:9px;font-family:'Syne',sans-serif;font-weight:600;font-size:12px;text-align:center;}
+.bot-nav{background:rgba(245,242,237,.04);border-top:.5px solid rgba(245,242,237,.08);padding:10px 0 16px;display:flex;justify-content:space-around;margin-top:auto;}
+.bn{display:flex;flex-direction:column;align-items:center;gap:4px;}
+.bn-lbl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,242,237,.3);}
+.bn.active .bn-lbl{color:var(--orange);}
+.bn-dot{width:4px;height:4px;border-radius:50%;background:var(--orange);}
+</style>
+</head>
+<body>
+<div class="status"><span class="status-time">9:41</span><div class="sbd"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div>
+<div class="hdr">
+  <div><div class="greeting">Disponible</div><div class="name">Carlos Meza</div></div>
+  <button class="badge-on">En línea</button>
+</div>
+<div class="stats">
+  <div class="sc"><div class="slbl">Hoy</div><div class="sval">$1,250</div><div class="ssub">+2 servicios</div></div>
+  <div class="sc"><div class="slbl">Calificación</div><div class="sval">4.9</div><div class="ssub">47 reseñas</div></div>
+</div>
+<div class="rlbl">Solicitudes</div>
+<div class="cards">
+  <div class="rcard new"><div class="rtop"><div class="rnm">Julio Landa</div><div class="rtag tag-new">Nueva</div></div><div class="rsvc">PLOMERÍA · FUGA EN BAÑO</div><div class="rbot"><div class="raddr">Col. Tres Ríos · 1.2 km</div><div class="rprice">$450 est.</div></div><div class="rbtns"><div class="rbtn-acc">Aceptar</div><div class="rbtn-dec">Rechazar</div></div></div>
+  <div class="rcard"><div class="rtop"><div class="rnm">María Soto</div><div class="rtag tag-prog">En curso</div></div><div class="rsvc">PLOMERÍA · CAMBIO DE LLAVE</div><div class="rbot"><div class="raddr">Col. Chapultepec · 3.4 km</div><div class="rprice">$300</div></div></div>
+  <div class="rcard"><div class="rtop"><div class="rnm">Roberto Cruz</div><div class="rtag tag-done">Completado</div></div><div class="rsvc">PLOMERÍA · INSTALACIÓN</div><div class="rbot"><div class="raddr">Col. Centro · 2.1 km</div><div class="rprice">$520</div></div></div>
+</div>
+<div class="bot-nav">
+  <div class="bn active"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E8531A" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg><div class="bn-lbl" style="color:var(--orange);">Panel</div><div class="bn-dot"></div></div>
+  <div class="bn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(245,242,237,.3)" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><div class="bn-lbl">Historial</div></div>
+  <div class="bn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(245,242,237,.3)" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg><div class="bn-lbl">Pagos</div></div>
+  <div class="bn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(245,242,237,.3)" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><div class="bn-lbl">Perfil</div></div>
+</div>
+</body>
+</html>

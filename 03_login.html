@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=375px">
+<title>FIXo · 03 · Login</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--black:#0D0D0D;--white:#F5F2ED;--cream:#EDE9E1;--orange:#E8531A;--mid:#6B6560;--border:rgba(13,13,13,0.1);}
+body{width:375px;min-height:812px;background:var(--white);font-family:'Syne',sans-serif;display:flex;flex-direction:column;}
+.status{display:flex;justify-content:space-between;align-items:center;padding:14px 24px 6px;}
+.status-time{font-weight:700;font-size:13px;color:var(--black);}
+.status-dots{display:flex;gap:5px;}
+.dot{width:5px;height:5px;border-radius:50%;background:var(--black);opacity:.7;}
+.content{flex:1;padding:12px 24px 40px;display:flex;flex-direction:column;}
+.back{display:flex;align-items:center;gap:6px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--mid);margin-bottom:24px;}
+.logo{display:flex;align-items:baseline;margin-bottom:6px;}
+.fix{font-family:'Syne',sans-serif;font-weight:800;font-size:36px;color:var(--black);letter-spacing:-0.03em;}
+.o{font-family:'DM Serif Display',serif;font-style:italic;font-size:36px;color:var(--orange);letter-spacing:-0.03em;}
+.title{font-family:'Syne',sans-serif;font-weight:800;font-size:24px;color:var(--black);letter-spacing:-0.02em;line-height:1.2;margin-bottom:6px;}
+.sub{font-family:'Syne',sans-serif;font-size:13px;color:var(--mid);margin-bottom:28px;line-height:1.5;}
+.field-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--mid);margin-bottom:7px;}
+.field{width:100%;background:var(--cream);border:.5px solid var(--border);border-radius:12px;padding:13px 16px;font-family:'Syne',sans-serif;font-size:14px;color:var(--black);margin-bottom:16px;}
+.forgot{font-family:'DM Mono',monospace;font-size:10px;color:var(--orange);letter-spacing:.1em;text-align:right;display:block;margin-top:-10px;margin-bottom:24px;}
+.btn{width:100%;background:var(--black);color:var(--white);border:none;border-radius:14px;padding:16px;font-family:'Syne',sans-serif;font-weight:700;font-size:15px;text-align:center;margin-bottom:16px;}
+.divider{display:flex;align-items:center;gap:12px;margin:4px 0 16px;}
+.divider-line{flex:1;height:.5px;background:var(--border);}
+.divider-text{font-family:'DM Mono',monospace;font-size:10px;color:var(--mid);letter-spacing:.1em;}
+.wa-btn{width:100%;background:#25D366;color:white;border:none;border-radius:14px;padding:14px;font-family:'Syne',sans-serif;font-weight:600;font-size:14px;display:flex;align-items:center;justify-content:center;gap:8px;}
+.register{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.08em;color:var(--mid);text-align:center;margin-top:16px;}
+.register span{color:var(--orange);}
+</style>
+</head>
+<body>
+<div class="status">
+  <span class="status-time">9:41</span>
+  <div class="status-dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+</div>
+<div class="content">
+  <div class="back">← Volver</div>
+  <div class="logo"><span class="fix">FIX</span><span class="o">o</span></div>
+  <div class="title">Bienvenido<br>de regreso.</div>
+  <div class="sub">Ingresa para ver tus servicios y técnicos disponibles.</div>
+  <div class="field-label">Teléfono o correo</div>
+  <div class="field" style="color:var(--mid);">667 000 0000</div>
+  <div class="field-label">Contraseña</div>
+  <div class="field" style="color:var(--mid);">••••••••</div>
+  <div class="forgot">¿Olvidaste tu contraseña?</div>
+  <div class="btn">Entrar →</div>
+  <div class="divider">
+    <div class="divider-line"></div>
+    <div class="divider-text">o continúa con</div>
+    <div class="divider-line"></div>
+  </div>
+  <div class="wa-btn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Continuar con WhatsApp
+  </div>
+  <div class="register">¿No tienes cuenta? <span>Regístrate</span></div>
+</div>
+</body>
+</html>

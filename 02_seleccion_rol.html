@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=375px">
+<title>FIXo · 02 · Selección de Rol</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--black:#0D0D0D;--white:#F5F2ED;--cream:#EDE9E1;--orange:#E8531A;--mid:#6B6560;--border:rgba(13,13,13,0.1);}
+body{width:375px;min-height:812px;background:var(--white);font-family:'Syne',sans-serif;display:flex;flex-direction:column;}
+.status{display:flex;justify-content:space-between;align-items:center;padding:14px 24px 6px;}
+.status-time{font-weight:700;font-size:13px;color:var(--black);}
+.status-dots{display:flex;gap:5px;}
+.dot{width:5px;height:5px;border-radius:50%;background:var(--black);opacity:.7;}
+.content{flex:1;padding:16px 24px 40px;display:flex;flex-direction:column;}
+.step-row{display:flex;align-items:center;gap:8px;margin-bottom:28px;}
+.step-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mid);}
+.dots{display:flex;gap:5px;}
+.sdot{height:4px;border-radius:2px;background:var(--border);}
+.sdot.active{background:var(--orange);width:28px;}
+.sdot.todo{width:20px;}
+.title{font-family:'Syne',sans-serif;font-weight:800;font-size:28px;color:var(--black);letter-spacing:-0.02em;line-height:1.15;margin-bottom:8px;}
+.sub{font-family:'Syne',sans-serif;font-size:14px;color:var(--mid);line-height:1.5;margin-bottom:28px;}
+.cards{display:flex;flex-direction:column;gap:12px;flex:1;}
+.card{border:.5px solid var(--border);border-radius:16px;padding:18px 20px;display:flex;align-items:center;gap:16px;background:var(--cream);}
+.card.selected{border:2px solid var(--orange);background:rgba(232,83,26,0.04);}
+.icon{width:44px;height:44px;border-radius:12px;background:var(--black);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.info{flex:1;}
+.name{font-family:'Syne',sans-serif;font-weight:700;font-size:15px;color:var(--black);margin-bottom:3px;}
+.desc{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.05em;color:var(--mid);}
+.check{width:22px;height:22px;border-radius:50%;border:1.5px solid var(--border);flex-shrink:0;}
+.card.selected .check{background:var(--orange);border-color:var(--orange);display:flex;align-items:center;justify-content:center;}
+.btn{width:100%;background:var(--orange);color:white;border:none;border-radius:14px;padding:16px;font-family:'Syne',sans-serif;font-weight:700;font-size:15px;cursor:pointer;text-align:center;margin-top:24px;}
+</style>
+</head>
+<body>
+<div class="status">
+  <span class="status-time">9:41</span>
+  <div class="status-dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+</div>
+<div class="content">
+  <div class="step-row">
+    <span class="step-label">Paso 1 de 3</span>
+    <div class="dots">
+      <div class="sdot active"></div>
+      <div class="sdot todo"></div>
+      <div class="sdot todo"></div>
+    </div>
+  </div>
+  <div class="title">¿Cómo vas<br>a usar FIXo?</div>
+  <div class="sub">Elige tu perfil para personalizar tu experiencia.</div>
+  <div class="cards">
+    <div class="card selected">
+      <div class="icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F5F2ED" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <div class="info">
+        <div class="name">Soy propietario</div>
+        <div class="desc">Necesito servicios para mi hogar</div>
+      </div>
+      <div class="check"></div>
+    </div>
+    <div class="card">
+      <div class="icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F5F2ED" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+      </div>
+      <div class="info">
+        <div class="name">Soy técnico</div>
+        <div class="desc">Ofrezco servicios profesionales</div>
+      </div>
+      <div class="check"></div>
+    </div>
+  </div>
+  <div class="btn">Continuar →</div>
+</div>
+</body>
+</html>

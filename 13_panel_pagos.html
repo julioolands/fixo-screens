@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=375px">
+<title>FIXo · 13 · Panel de Pagos</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--black:#0D0D0D;--white:#F5F2ED;--cream:#EDE9E1;--orange:#E8531A;--mid:#6B6560;}
+body{width:375px;min-height:812px;background:var(--black);font-family:'Syne',sans-serif;display:flex;flex-direction:column;}
+.status{display:flex;justify-content:space-between;align-items:center;padding:14px 24px 6px;}
+.status-time{font-weight:700;font-size:13px;color:var(--white);}
+.sbd{display:flex;gap:5px;}.dot{width:5px;height:5px;border-radius:50%;background:var(--white);opacity:.7;}
+.hero{padding:8px 24px 24px;}
+.plbl{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,242,237,.4);margin-bottom:6px;}
+.balance{font-family:'Syne',sans-serif;font-weight:800;font-size:40px;color:var(--white);letter-spacing:-.03em;line-height:1;}
+.bsub{font-family:'DM Mono',monospace;font-size:10px;color:var(--orange);margin-top:5px;}
+.pcards{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px;}
+.pc{background:rgba(245,242,237,.06);border:.5px solid rgba(245,242,237,.1);border-radius:12px;padding:12px 14px;}
+.pclbl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,242,237,.35);margin-bottom:5px;}
+.pcval{font-family:'Syne',sans-serif;font-weight:700;font-size:16px;color:var(--white);}
+.body{flex:1;padding:20px 22px 28px;background:var(--white);display:flex;flex-direction:column;gap:16px;}
+.lbl{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mid);margin-bottom:8px;}
+.wd{background:var(--cream);border-radius:14px;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;}
+.wdlbl{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--mid);margin-bottom:4px;}
+.wdamt{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;color:var(--black);letter-spacing:-.02em;}
+.wdbtn{background:var(--black);color:var(--white);border:none;border-radius:11px;padding:10px 16px;font-family:'Syne',sans-serif;font-weight:700;font-size:13px;}
+.txns{display:flex;flex-direction:column;gap:8px;}
+.txn{display:flex;align-items:center;gap:12px;padding:11px 14px;background:var(--cream);border-radius:12px;}
+.txn-ic{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.ic-green{background:rgba(29,158,117,.12);}
+.ic-orange{background:rgba(232,83,26,.1);}
+.ic-gray{background:rgba(13,13,13,.06);}
+.txn-inf{flex:1;}
+.txn-nm{font-family:'Syne',sans-serif;font-weight:600;font-size:12px;color:var(--black);}
+.txn-dt{font-family:'DM Mono',monospace;font-size:10px;color:var(--mid);margin-top:1px;}
+.txn-amt{font-family:'Syne',sans-serif;font-weight:700;font-size:13px;}
+.amt-pos{color:#1D9E75;}
+.amt-neg{color:var(--orange);}
+.amt-pend{color:var(--mid);}
+.clabe{background:var(--black);border-radius:14px;padding:14px 16px;display:flex;align-items:center;gap:12px;}
+.clabe-ic{width:36px;height:36px;border-radius:10px;background:rgba(245,242,237,.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.clabe-lbl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,242,237,.35);margin-bottom:3px;}
+.clabe-num{font-family:'DM Mono',monospace;font-size:12px;color:var(--white);letter-spacing:.06em;}
+.clabe-edit{font-family:'DM Mono',monospace;font-size:10px;color:var(--orange);margin-left:auto;}
+</style>
+</head>
+<body>
+<div class="status"><span class="status-time">9:41</span><div class="sbd"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div>
+<div class="hero">
+  <div class="plbl">Saldo disponible</div>
+  <div class="balance">$3,240</div>
+  <div class="bsub">+$420 hoy · 3 servicios</div>
+  <div class="pcards">
+    <div class="pc"><div class="pclbl">Esta semana</div><div class="pcval">$8,150</div></div>
+    <div class="pc"><div class="pclbl">Este mes</div><div class="pcval">$31,400</div></div>
+  </div>
+</div>
+<div class="body">
+  <div class="wd">
+    <div><div class="wdlbl">Disponible para retirar</div><div class="wdamt">$3,240</div></div>
+    <button class="wdbtn">Retirar</button>
+  </div>
+  <div>
+    <div class="lbl">Movimientos recientes</div>
+    <div class="txns">
+      <div class="txn"><div class="txn-ic ic-green"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1D9E75" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div><div class="txn-inf"><div class="txn-nm">Servicio · Julio Landa</div><div class="txn-dt">Hoy · 10:22 am · Plomería</div></div><div class="txn-amt amt-pos">+$420</div></div>
+      <div class="txn"><div class="txn-ic ic-green"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1D9E75" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div><div class="txn-inf"><div class="txn-nm">Servicio · María Soto</div><div class="txn-dt">Hoy · 8:15 am · Plomería</div></div><div class="txn-amt amt-pos">+$300</div></div>
+      <div class="txn"><div class="txn-ic ic-orange"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E8531A" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><div class="txn-inf"><div class="txn-nm">Comisión FIXo · 15%</div><div class="txn-dt">Hoy · automático</div></div><div class="txn-amt amt-neg">-$108</div></div>
+      <div class="txn"><div class="txn-ic ic-gray"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B6560" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><div class="txn-inf"><div class="txn-nm">Retiro a BBVA</div><div class="txn-dt">Ayer · CLABE ···4821</div></div><div class="txn-amt amt-pend">-$2,500</div></div>
+    </div>
+  </div>
+  <div class="clabe">
+    <div class="clabe-ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(245,242,237,.5)" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div>
+    <div><div class="clabe-lbl">Cuenta de retiro</div><div class="clabe-num">BBVA · CLABE ···4821</div></div>
+    <div class="clabe-edit">Cambiar</div>
+  </div>
+</div>
+</body>
+</html>

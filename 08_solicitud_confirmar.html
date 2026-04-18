@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=375px">
+<title>FIXo · 08 · Solicitud — Confirmar</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--black:#0D0D0D;--white:#F5F2ED;--cream:#EDE9E1;--orange:#E8531A;--mid:#6B6560;--border:rgba(13,13,13,0.1);}
+body{width:375px;min-height:812px;background:var(--white);font-family:'Syne',sans-serif;display:flex;flex-direction:column;}
+.status{display:flex;justify-content:space-between;align-items:center;padding:14px 24px 6px;}
+.status-time{font-weight:700;font-size:13px;color:var(--black);}
+.sbd{display:flex;gap:5px;}.dot{width:5px;height:5px;border-radius:50%;background:var(--black);opacity:.7;}
+.back{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--mid);padding:12px 24px 0;}
+.steps{display:flex;align-items:center;padding:12px 24px 16px;}
+.si{display:flex;align-items:center;gap:6px;flex:1;}
+.sc{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:10px;flex-shrink:0;}
+.sc.done{background:var(--black);color:var(--white);}
+.sc.active{background:var(--orange);color:white;}
+.sl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--black);}
+.step-line{flex:1;height:1px;background:var(--black);margin:0 4px;}
+.body{flex:1;padding:0 24px 24px;display:flex;flex-direction:column;}
+.title{font-family:'Syne',sans-serif;font-weight:800;font-size:26px;color:var(--black);letter-spacing:-.02em;line-height:1.15;margin-bottom:16px;}
+.conf-card{background:var(--cream);border:.5px solid var(--border);border-radius:16px;padding:18px;margin-bottom:14px;}
+.conf-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:.5px solid rgba(13,13,13,.08);}
+.conf-row:last-child{border-bottom:none;}
+.clbl{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);}
+.cval{font-family:'Syne',sans-serif;font-weight:600;font-size:13px;color:var(--black);}
+.cval.orange{color:var(--orange);}
+.price-box{background:var(--black);border-radius:14px;padding:16px 18px;margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;}
+.plbl{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,242,237,.4);}
+.pval{font-family:'Syne',sans-serif;font-weight:800;font-size:22px;color:var(--white);letter-spacing:-.02em;}
+.pnote{font-family:'DM Mono',monospace;font-size:9px;color:rgba(245,242,237,.35);margin-top:3px;}
+.map{background:#E0DCD4;border-radius:14px;height:90px;margin-bottom:10px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.map-grid{position:absolute;inset:0;opacity:.3;}
+.map-pin{position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);}
+.addr{font-family:'DM Mono',monospace;font-size:10px;color:var(--mid);margin-bottom:16px;letter-spacing:.08em;}
+.btn{width:100%;background:var(--orange);color:white;border:none;border-radius:14px;padding:16px;font-family:'Syne',sans-serif;font-weight:700;font-size:15px;text-align:center;margin-bottom:8px;}
+.btn-out{width:100%;background:transparent;color:var(--black);border:.5px solid rgba(13,13,13,.2);border-radius:14px;padding:14px;font-family:'Syne',sans-serif;font-weight:600;font-size:14px;text-align:center;}
+</style>
+</head>
+<body>
+<div class="status"><span class="status-time">9:41</span><div class="sbd"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div>
+<div class="back">← Atrás</div>
+<div class="steps">
+  <div class="si"><div class="sc done">✓</div><div class="sl">Servicio</div></div>
+  <div class="step-line"></div>
+  <div class="si"><div class="sc done">✓</div><div class="sl">Técnico</div></div>
+  <div class="step-line"></div>
+  <div class="si"><div class="sc active">3</div><div class="sl">Confirmar</div></div>
+</div>
+<div class="body">
+  <div class="title">Resumen<br>de solicitud</div>
+  <div class="conf-card">
+    <div class="conf-row"><div class="clbl">Servicio</div><div class="cval">Plomería</div></div>
+    <div class="conf-row"><div class="clbl">Técnico</div><div class="cval">Carlos Meza ★ 4.9</div></div>
+    <div class="conf-row"><div class="clbl">Urgencia</div><div class="cval orange">Hoy</div></div>
+    <div class="conf-row"><div class="clbl">Llegada est.</div><div class="cval">~18 minutos</div></div>
+    <div class="conf-row"><div class="clbl">Dirección</div><div class="cval">Col. Tres Ríos</div></div>
+  </div>
+  <div class="price-box">
+    <div><div class="plbl">Precio estimado</div><div class="pval">$350 – $600</div><div class="pnote">El precio final depende del trabajo realizado</div></div>
+  </div>
+  <div class="map">
+    <svg class="map-grid" viewBox="0 0 300 90" preserveAspectRatio="none"><defs><pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(13,13,13,.15)" stroke-width=".5"/></pattern></defs><rect width="300" height="90" fill="url(#g)"/></svg>
+    <div class="map-pin"><svg width="24" height="28" viewBox="0 0 24 28"><circle cx="12" cy="11" r="9" fill="#E8531A"/><circle cx="12" cy="11" r="4" fill="white"/></svg></div>
+  </div>
+  <div class="addr">Col. Tres Ríos, Culiacán · Sinaloa</div>
+  <div class="btn">Enviar solicitud →</div>
+  <div class="btn-out">Modificar</div>
+</div>
+</body>
+</html>

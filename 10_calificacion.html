@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=375px">
+<title>FIXo · 10 · Calificación</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--black:#0D0D0D;--white:#F5F2ED;--cream:#EDE9E1;--orange:#E8531A;--mid:#6B6560;--border:rgba(13,13,13,0.1);}
+body{width:375px;min-height:812px;background:var(--white);font-family:'Syne',sans-serif;display:flex;flex-direction:column;}
+.status{display:flex;justify-content:space-between;align-items:center;padding:14px 24px 6px;}
+.status-time{font-weight:700;font-size:13px;color:var(--black);}
+.sbd{display:flex;gap:5px;}.dot{width:5px;height:5px;border-radius:50%;background:var(--black);opacity:.7;}
+.content{flex:1;padding:20px 24px 32px;display:flex;flex-direction:column;gap:16px;}
+.header{text-align:center;}
+.check{width:60px;height:60px;border-radius:50%;background:var(--black);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;}
+.title{font-family:'Syne',sans-serif;font-weight:800;font-size:22px;color:var(--black);letter-spacing:-.02em;line-height:1.2;margin-bottom:6px;}
+.sub{font-family:'Syne',sans-serif;font-size:13px;color:var(--mid);}
+.summary{background:var(--cream);border-radius:14px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;}
+.ss-svc{font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:var(--black);}
+.ss-tech{font-family:'DM Mono',monospace;font-size:10px;color:var(--mid);margin-top:2px;}
+.ss-price{font-family:'Syne',sans-serif;font-weight:800;font-size:22px;color:var(--black);letter-spacing:-.02em;}
+.lbl{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mid);margin-bottom:10px;}
+.stars{display:flex;justify-content:center;gap:10px;}
+.star svg{width:40px;height:40px;}
+.aspects{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.asp{padding:10px 12px;border-radius:12px;border:.5px solid var(--border);background:var(--cream);font-family:'Syne',sans-serif;font-weight:600;font-size:12px;color:var(--mid);text-align:center;}
+.asp.sel{background:var(--black);color:var(--white);border-color:var(--black);}
+.comment{background:var(--cream);border:.5px solid var(--border);border-radius:14px;padding:13px 15px;font-family:'Syne',sans-serif;font-size:13px;color:var(--mid);min-height:70px;line-height:1.5;}
+.tips{display:flex;gap:8px;}
+.tip{flex:1;padding:10px 6px;border-radius:12px;border:.5px solid var(--border);background:var(--cream);font-family:'DM Mono',monospace;font-size:11px;color:var(--mid);text-align:center;}
+.tip.sel{background:var(--orange);color:white;border-color:var(--orange);}
+.btn{width:100%;background:var(--orange);color:white;border:none;border-radius:14px;padding:16px;font-family:'Syne',sans-serif;font-weight:700;font-size:15px;text-align:center;margin-top:auto;}
+</style>
+</head>
+<body>
+<div class="status"><span class="status-time">9:41</span><div class="sbd"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div>
+<div class="content">
+  <div class="header">
+    <div class="check"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F5F2ED" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+    <div class="title">Servicio<br>completado</div>
+    <div class="sub">¿Cómo te fue con Carlos?</div>
+  </div>
+  <div class="summary">
+    <div><div class="ss-svc">Plomería · Fuga en baño</div><div class="ss-tech">Carlos Meza · hoy 10:22 am</div></div>
+    <div class="ss-price">$420</div>
+  </div>
+  <div>
+    <div class="lbl" style="text-align:center;">Tu calificación</div>
+    <div class="stars">
+      <div class="star"><svg viewBox="0 0 24 24" fill="#E8531A" stroke="#E8531A" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      <div class="star"><svg viewBox="0 0 24 24" fill="#E8531A" stroke="#E8531A" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      <div class="star"><svg viewBox="0 0 24 24" fill="#E8531A" stroke="#E8531A" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      <div class="star"><svg viewBox="0 0 24 24" fill="#E8531A" stroke="#E8531A" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      <div class="star"><svg viewBox="0 0 24 24" fill="rgba(13,13,13,.1)" stroke="rgba(13,13,13,.2)" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+    </div>
+  </div>
+  <div>
+    <div class="lbl">¿Qué destacas?</div>
+    <div class="aspects">
+      <div class="asp sel">Puntual</div>
+      <div class="asp sel">Limpio</div>
+      <div class="asp">Buen precio</div>
+      <div class="asp">Rápido</div>
+    </div>
+  </div>
+  <div class="comment">Muy buen servicio, llegó a tiempo y dejó todo limpio...</div>
+  <div>
+    <div class="lbl">Agregar propina (opcional)</div>
+    <div class="tips">
+      <div class="tip">Sin propina</div>
+      <div class="tip sel">$50</div>
+      <div class="tip">$100</div>
+      <div class="tip">$150</div>
+    </div>
+  </div>
+  <div class="btn">Enviar calificación →</div>
+</div>
+</body>
+</html>
